@@ -11,6 +11,6 @@ ENV PYTHONBUFFERED 1
 RUN set -ex && mkdir /app
 
 WORKDIR /app
-# COPY ["requirements.txt", "/app/"]
+COPY ["requirements.txt", "/app/"]
 
-# RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt
