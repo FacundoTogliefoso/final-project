@@ -18,7 +18,7 @@
       <!-- Navegación -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-          <a class="navbar-brand" href="{% url 'home' %}">Final Project</a>
+          <a class="navbar-brand" href="{% url 'home' %}">Final project</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ned" aria-controls="ned" aria-expanded="false">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -28,36 +28,32 @@
                 <a class="nav-link" href="{% url 'home' %}">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'sample' %}">Sample</a>
+                <a class="nav-link" href="{% url 'sample' %}">Prueba</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'pages:pages' %}">Páginas</a>
               </li>    
-              {% comment %} 
-              <li class="nav-item">
+              {% comment %} <li class="nav-item">
                 <a class="nav-link" href="{% url 'profiles:list' %}">Perfiles</a>
-              </li>
-            </ul> {% endcomment %}
-            {% comment %} <ul class="navbar-nav">
+              </li> {% endcomment %}
+            </ul>
+            <ul class="navbar-nav">
               {% if not request.user.is_authenticated %}
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'login' %}">Acceder</a>
                 </li>
-                <li class="nav-item">
+                {% comment %} <li class="nav-item">
                     <a class="nav-link" href="{% url 'signup' %}">Registro</a>
-                  </li>
+                </li> {% endcomment %}
               {% else %}
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'messenger:list' %}">Mensajes</a>
-              </li>
-                <li class="nav-item">
+                {% comment %} <li class="nav-item">
                   <a class="nav-link" href="{% url 'profile' %}">Perfil</a>
-                </li>
+                </li> {% endcomment %}
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'logout' %}">Salir</a>
                 </li>
               {% endif %}
-            </ul> {% endcomment %}
+            </ul>
           </div>
         </div>
       </nav>
