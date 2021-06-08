@@ -30,6 +30,7 @@ Create docker image
 Makemigrations and migrate
 ===================
 ::
+
     docker exec -it finalproject /bin/bash
     python manage.py makemigrations
     python manage.py migrate
