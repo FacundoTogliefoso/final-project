@@ -3,8 +3,11 @@ from ckeditor.fields import RichTextField
 
 
 def custom_upload_to(instance, filename):
-    old_instance = Page.objects.get(pk=instance.pk)
-    old_instance.image.delete()
+    try:
+        old_instance = Page.objects.get(pk=instance.pk)
+        old_instance.image.delete()
+    except:
+        pass
     return 'page/' + filename
 
 

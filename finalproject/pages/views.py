@@ -34,7 +34,6 @@ class PageUpdateView(UpdateView):
     def get_success_url(self):
         return reverse_lazy('pages:update', args=[self.object.id]) + '?ok'
 
-
 @method_decorator(staff_member_required, name='dispatch')
 class PageDeleteView(DeleteView):
     model = Page
