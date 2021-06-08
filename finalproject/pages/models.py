@@ -4,7 +4,7 @@ from ckeditor.fields import RichTextField
 
 def custom_upload_to(instance, filename):
     old_instance = Page.objects.get(pk=instance.pk)
-    old_instance.avatar.delete()
+    old_instance.image.delete()
     return 'page/' + filename
 
 
@@ -15,6 +15,7 @@ class Page(models.Model):
     created = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creación")
     updated = models.DateTimeField(auto_now=True, verbose_name="Fecha de edición")
     image = models.ImageField(upload_to=custom_upload_to, null=True, blank=True)
+    posted = models.DateTimeField(verbose_name="Fecha de carga de la imagen", null=True, blank=True)
 
     class Meta:
         verbose_name = "página"
