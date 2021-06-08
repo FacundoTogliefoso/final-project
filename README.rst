@@ -50,6 +50,7 @@ Steps
 
 Clone repository
 ================
+::
 
     mkdir ~/projects
     cd ~/projects
