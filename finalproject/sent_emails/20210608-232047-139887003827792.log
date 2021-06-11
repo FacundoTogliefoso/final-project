@@ -1,0 +1,25 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Password reset on localhost:8000
+From: webmaster@localhost
+To: belunchi@gmail.com
+Date: Tue, 08 Jun 2021 23:20:47 -0000
+Message-ID: <162319444703.508916.18150486806313730639@factog-Lenovo-V15-IIL>
+
+
+You're receiving this email because you requested a password reset for your user account at localhost:8000.
+
+Please go to the following page and choose a new password:
+
+http://localhost:8000/accounts/reset/Mg/any66m-3b67c52b9b654e2cbc59b0cad205cdde/
+
+Your username, in case you’ve forgotten: belunchi
+
+Thanks for using our site!
+
+The localhost:8000 team
+
+
+
+-------------------------------------------------------------------------------
